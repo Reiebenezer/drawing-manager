@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Drawing Manager
 
-## Getting Started
+A small project, made with :heart: by Rei Ebenezer.
 
-First, run the development server:
+The `Drawing Manager` is an Excalidraw clone with local file management integrated into it. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Setup
+
+This is a [`Next.js`](https://nextjs.org) application. You can download the app by cloning the repository:
+
+```sh
+git clone https://github.com/Reiebenezer/drawing-manager.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+and then run `npm install` or `bun install`, depending on the package manager you're using. 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> Note that this requires you to have a runtime installed, such as Node or Bun. 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Starting the App
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### Development 
+Run the following command to start the development server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Build
+Building the application is as easy as calling the following commands: 
 
-## Deploy on Vercel
+```sh
+npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+and for previewing your build:
+```sh
+npm run start
+```
+### Standalone
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+You could also consider building a standalone version, via the following commands:
+
+```sh
+npm run build-standalone # for building
+npm run start-standalone # for starting the server on the standalone build
+```
+> I recommend using the `standalone` build for long-term use. Only use the development server when you are planning to contribute to this project.
+
+
+### Ports
+This application defaults to using port `9000`. If you want to use a different port, change the port number in the `dev` and `start-standalone` scripts in `package.json`.
+
+## File Management
+
+Excalidraw files (.excalidraw) are automatically created in the `projects` directory on launch. You can add your own .excalidraw files from the web to this folder, then refresh the page. Your files will be automatically imported. 
+
+> Don't forget to create a backup of your original .excalidraw file first to avoid any issues. This application is in **alpha**, and breaking changes may occur.
+
+## Contributing
+
+You can create a pull request of this repository, or raise an issue. Thank you very much! :heart:
